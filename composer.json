@@ -1,0 +1,30 @@
+{
+    "name": "zazama/videocal",
+    "description": "Silverstripe local video management module",
+    "type": "silverstripe-module",
+    "keywords": [
+        "silverstripe",
+        "cms",
+        "video",
+        "shortcode",
+        "asset"
+    ],
+    "license": "BSD-3-Clause",
+    "authors": [
+        {
+            "name": "Jan Metzger",
+            "email": "jan.metzger@gmx.net",
+            "homepage": "https://zazama.de",
+            "role": "developer"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/Zazama/silverstripe-videocal"
+    },
+    "require": {
+        "silverstripe/framework": "^3",
+        "silverstripe/cms": "^3"
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
