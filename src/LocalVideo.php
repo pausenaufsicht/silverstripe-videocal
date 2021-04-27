@@ -11,6 +11,8 @@ use SilverStripe\Forms\LiteralField;
 
 class LocalVideo extends DataObject {
 
+    private static $table_name = 'LocalVideo';
+
     private static $has_one = [
         'Video' => File::class,
         'Thumbnail' => Image::class
