@@ -5,11 +5,12 @@ namespace Zazama\Videocal;
 use SilverStripe\Admin\ModelAdmin;
 use SilverStripe\Forms\GridField\GridField;
 use SilverStripe\Forms\GridField\GridFieldDataColumns;
+use Zazama\Videocal\LocalVideo;
 
 class LocalVideoModelAdmin extends ModelAdmin
 {
     private static $managed_models = [
-        'LocalVideo'
+        LocalVideo::class
     ];
 
     private static $url_segment = 'videos';

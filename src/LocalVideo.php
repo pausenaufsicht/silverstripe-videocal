@@ -8,6 +8,9 @@ use SilverStripe\Assets\Image;
 use SilverStripe\Forms\FieldList;
 use SilverStripe\AssetAdmin\Forms\UploadField;
 use SilverStripe\Forms\LiteralField;
+use SilverStripe\Forms\NumericField;
+use SilverStripe\Forms\TextField;
+use SilverStripe\ORM\FieldType\DBString;
 
 class LocalVideo extends DataObject {
 
@@ -23,9 +26,13 @@ class LocalVideo extends DataObject {
         'Thumbnail'
     ];
 
+    private static $casting = [
+        'VideoName' => 'Varchar'
+    ];
+
     private static $summary_fields = [
         'ID' => 'ID',
-        'getVideoName' => 'Video'
+        'VideoName' => 'Video'
     ];
 
     public function getCMSFields() {
@@ -35,7 +42,7 @@ class LocalVideo extends DataObject {
                 'Video'
             )
                 ->setFolderName('LocalVideos')
-                ->setAllowedFileCategories('mov'),
+                ->setAllowedFileCategories('video'),
             UploadField::create(
                 'Thumbnail',
                 'Thumbnail'
