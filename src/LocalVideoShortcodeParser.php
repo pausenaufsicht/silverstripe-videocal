@@ -1,5 +1,10 @@
 <?php
 
+namespace Zazama\Videocal;
+
+use SilverStripe\View\ArrayData;
+use SilverStripe\ORM\ArrayList;
+
 class LocalVideoShortcodeParser {
     public static function LocalVideoParser($arguments, $content, $parser, $tagName) {
         $localVideoId = $arguments['videoid'];
