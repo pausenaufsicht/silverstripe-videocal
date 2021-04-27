@@ -1,3 +1,4 @@
 <?php
+use SilverStripe\View\Parsers\ShortcodeParser;
 
-ShortcodeParser::get('default')->register('localvideo', array('LocalVideoShortcodeParser', 'LocalVideoParser'));
+ShortcodeParser::get('default')->register('localvideo', ['Zazama\\Videocal\\LocalVideoShortcodeParser', 'LocalVideoParser']);

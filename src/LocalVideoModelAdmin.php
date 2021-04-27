@@ -1,9 +1,16 @@
 <?php
 
+namespace Zazama\Videocal;
+
+use SilverStripe\Admin\ModelAdmin;
+use SilverStripe\Forms\GridField\GridField;
+use SilverStripe\Forms\GridField\GridFieldDataColumns;
+use Zazama\Videocal\LocalVideo;
+
 class LocalVideoModelAdmin extends ModelAdmin
 {
     private static $managed_models = [
-        'LocalVideo'
+        LocalVideo::class
     ];
 
     private static $url_segment = 'videos';
@@ -24,7 +31,7 @@ class LocalVideoModelAdmin extends ModelAdmin
 
                 $gridFieldDataColumns->setFieldFormatting(array_merge($gridFieldDataColumns->getFieldFormatting(), array(
                     "Shortcode" => function($value, $item) {
-                        return '<span>' . $item->getShortcode() . '</span> <a href="#' . $item->ID . '" class="btn btn-sm btn-outline-secondary action" data-shortcode=\'' . $item->getShortcode() . '\' onclick="navigator.clipboard.writeText(this.dataset.shortcode); return false;">' . _t('COPY_SHORTCODE', 'Copy Shortcode') . '</a>';
+                        return '<span>' . $item->getShortcode() . '</span> <a href="#' . $item->ID . '" class="btn btn-sm btn-outline-secondary action" data-shortcode=\'' . $item->getShortcode() . '\' onclick="navigator.clipboard.writeText(this.dataset.shortcode); return false;">' . _t('Zazama\\Videocal\\COPY_SHORTCODE', 'Copy Shortcode') . '</a>';
                     }
                 )));
 
